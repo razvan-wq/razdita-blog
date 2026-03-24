@@ -11,6 +11,11 @@ export interface PostFrontmatter {
   keywords: string[];
   author?: string;
   image?: string;
+  heroImage?: string;
+  images?: string[];
+  faqs?: string;
+  schemas?: string;
+  businessId?: string;
   published?: boolean;
 }
 
