@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #2563eb;
+  --color-secondary: #1e40af;
+  --color-accent: #f59e0b;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .prose img {
+    @apply rounded-lg shadow-md;
+  }
+
+  .prose table {
+    @apply w-full text-sm;
+  }
+
+  .prose th {
+    @apply bg-gray-50 text-left font-semibold;
+  }
+
+  .prose td,
+  .prose th {
+    @apply border border-gray-200 px-4 py-2;
+  }
+
+  .toc-link {
+    @apply block py-1 text-sm text-gray-500 transition-colors hover:text-primary;
+  }
+
+  .toc-link.depth-3 {
+    @apply pl-4;
+  }
+}
+
+/* ── CTA Blocks ────────────────────────────────────────────────────── */
+
+.cta-block {
+  @apply my-10 rounded-xl border-2 p-6 sm:p-8;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.cta-logo {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.cta-logo svg {
+  width: 48px;
+  height: 48px;
+}
+
+.cta-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cta-body {
+  flex: 1;
+}
+
+.cta-heading {
+  @apply text-xl font-bold text-gray-900;
+  margin: 0 0 0.25rem 0;
+}
+
+.cta-desc {
+  @apply text-sm text-gray-600;
+  margin: 0 0 1rem 0;
+}
+
+.cta-button {
+  @apply inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-bold text-white transition-all;
+  text-decoration: none !important;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Skool: purple */
+.cta-skool {
+  border-color: #7C3AED;
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+}
+.cta-button-skool {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+}
+
+/* Selluna: teal */
+.cta-selluna {
+  border-color: #0D9488;
+  background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+}
+.cta-button-selluna {
+  background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+}
+
+/* Horison: orange */
+.cta-horison {
+  border-color: #FF5200;
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+}
+.cta-button-horison {
+  background: linear-gradient(135deg, #FF5200 0%, #EA580C 100%);
+}
+
+/* Generic */
+.cta-generic {
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+}
+.cta-generic .cta-button {
+  background: var(--color-primary);
+}
+
+/* Ensure prose doesn't override CTA styles */
+.prose .cta-block {
+  margin: 2.5rem 0;
+}
+
+.prose .cta-block .cta-heading {
+  color: #0f172a;
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.prose .cta-block .cta-desc {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.prose .cta-block a.cta-button {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+/* ── Inline Blog Images ────────────────────────────────────────────── */
+
+.blog-inline-image {
+  margin: 2rem 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.blog-inline-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prose .blog-inline-image {
+  margin: 2rem 0;
+}
+
+/* Syntax highlighting overrides */
+pre code.hljs {
+  @apply rounded-lg text-sm;
+}
