@@ -18,9 +18,9 @@ export const siteConfig = {
 
   // Theme colours
   theme: {
-    primary: '#FF5200',
+    primary: '#F97316',
     secondary: '#1B2B5B',
-    accent: '#F5A623',
+    accent: '#F59E0B',
   },
 
   // Social links
