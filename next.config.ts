@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+    assetPrefix: 'https://blog.razdita.com',
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
 };
 
